@@ -8,7 +8,6 @@ class Song
   def initialize(name, artist, genre)
     @name, @artist, @genre = name, artist, genre
     this_song = {artist => name}
-
     @@genre_count += 1
 
     unless @@genre_artists.include?(artist)
@@ -21,9 +20,6 @@ class Song
       ROSTER[genre] = []
       ROSTER[genre] << this_song
     end
-    # pp ROSTER
-    # puts @@genre_count
-    # puts @@genre_artists
   end
 
   def list_roster
@@ -33,10 +29,4 @@ class Song
     puts "The Artists included are:"
     @@genre_artists
   end
-
 end
-
-popSong1 = Song.new('HappySong', 'Leah', 'Pop')
-rockSong1 = Song.new('Rocker', 'John', 'Rock')
-popSong2 = Song.new('Jollysong', 'Woot', 'Pop')
-popSong3 = Song.new('ExubSong', 'Leah', 'Pop')
