@@ -31,13 +31,13 @@ class Song
     end
   end
 
-  def list_roster
-    puts "The count is #{@@count}"
-    puts "The Roster looks like this:"
-    puts ROSTER
-    puts "The Artists included are:"
-    @@artists
-  end
+  # def list_roster
+  #   puts "The count is #{@@count}"
+  #   puts "The Roster looks like this:"
+  #   puts ROSTER
+  #   puts "The Artists included are:"
+  #   @@artists
+  # end
 
   def self.count
     @@count
