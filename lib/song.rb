@@ -1,16 +1,12 @@
 class Song
-  attr_accessor :artists, :genres, :name
+  attr_accessor :artist, :genre, :name
 
   @@genre_count = 0
   @@genre_artists = []
   ROSTER = {}
 
   def initialize(name, artist, genre)
-    # @name, @artist, @genre = name, artist, genre
-
-    @name = name
-    @artist = artist
-    @genre = genre
+    @name, @artist, @genre = name, artist, genre
 
     this_song = {artist => name}
     @@genre_count += 1
