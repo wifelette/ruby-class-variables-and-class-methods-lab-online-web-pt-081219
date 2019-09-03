@@ -79,7 +79,6 @@ class Song
     end
 
     artists_hash
-
   end
 
 end
