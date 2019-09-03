@@ -1,18 +1,23 @@
 class Song
   attr_accessor :artist, :genre, :name
 
-  @@genre_count = 0
-  @@genre_artists = []
+  @@count = 0
+  @@artists = []
+  @@genres = []
   ROSTER = {}
 
   def initialize(name, artist, genre)
     @name, @artist, @genre = name, artist, genre
 
     this_song = {artist => name}
-    @@genre_count += 1
+    @@count += 1
 
-    unless @@genre_artists.include?(artist)
-      @@genre_artists << artist
+    unless @@artists.include?(artist)
+      @@artists << artist
+    end
+
+    unless @@genres.include?(genre)
+      @@genres << genre
     end
 
     if ROSTER.has_key?(genre)
@@ -24,10 +29,10 @@ class Song
   end
 
   def list_roster
-    puts "The count is #{@@genre_count}"
+    puts "The count is #{@@count}"
     puts "The Roster looks like this:"
     puts ROSTER
     puts "The Artists included are:"
-    @@genre_artists
+    @@artists
   end
 end
