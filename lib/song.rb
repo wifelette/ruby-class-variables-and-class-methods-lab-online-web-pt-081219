@@ -35,4 +35,8 @@ class Song
     puts "The Artists included are:"
     @@artists
   end
+
+  def count
+    @@count
+  end
 end
