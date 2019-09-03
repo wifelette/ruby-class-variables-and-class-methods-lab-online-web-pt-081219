@@ -12,13 +12,16 @@ class Song
     this_song = {artist => name}
     @@count += 1
 
-    unless @@artists.include?(artist)
-      @@artists << artist
-    end
+    # unless @@artists.include?(artist)
+    #   @@artists << artist
+    # end
+    #
+    # unless @@genres.include?(genre)
+    #   @@genres << genre
+    # end
 
-    unless @@genres.include?(genre)
-      @@genres << genre
-    end
+    @@artists << artist
+    @@genres << genre
 
     if ROSTER.has_key?(genre)
       ROSTER[genre] << this_song
