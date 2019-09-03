@@ -12,6 +12,8 @@ class Song
     this_song = {artist => name}
     @@count += 1
 
+    # This is how it would work if we avoided dupes right up front:
+    #
     # unless @@artists.include?(artist)
     #   @@artists << artist
     # end
@@ -52,9 +54,11 @@ class Song
   end
 
   def self.genre_count
+    @@genres
   end
 
   def self.artist_count
+
   end
 
 end
