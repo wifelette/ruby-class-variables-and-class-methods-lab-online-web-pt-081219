@@ -6,7 +6,12 @@ class Song
   ROSTER = {}
 
   def initialize(name, artist, genre)
-    @name, @artist, @genre = name, artist, genre
+    # @name, @artist, @genre = name, artist, genre
+
+    @name = name
+    @artist = artist
+    @genre = genre
+
     this_song = {artist => name}
     @@genre_count += 1
 
